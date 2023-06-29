@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>Redirect</title>
+</head>
+
+<body>
+    <script>
+        const currentUrl = window.location。href;
+        const url = new URL(currentUrl);
+        const route = url.pathname;
+        const params = url.searchParams;
+        const ipAddress = "47.99.60.173";
+        const port = "8080";
+        const redirectUrl = `http://${ipAddress}:${port}${params}`;
+        window.location。href = redirectUrl;
+    </script>
+</body>
+
+</html>

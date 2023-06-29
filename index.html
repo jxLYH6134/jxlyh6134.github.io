@@ -7,15 +7,15 @@
 
 <body>
     <script>
-        const currentUrl = window.location。href;
+        const currentUrl = window.location.href;
         const url = new URL(currentUrl);
         const route = url.pathname;
-        const params = url.searchParams;
+        const params = url.search;
         const ipAddress = "47.99.60.173";
         const port = "8080";
-        const redirectUrl = `http://${ipAddress}:${port}${params}`;
-        window.location.href = redirectUrl;
-    </script>
+        const redirectUrl = `http://${ipAddress}:${port}${route}${params}`;
+        window.location.replace(redirectUrl);
+      </script>
 </body>
 
 </html>
